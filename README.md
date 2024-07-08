@@ -1,4 +1,4 @@
-# Google Java Format Action
+# Google Java Style Action
 
 Automatically format your Java files using [Google Java Style guidelines](https://google.github.io/styleguide/javaguide.html).
 
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # v2 minimum required
-      - uses: axel-op/googlejavaformat-action@v3
+      - uses: ryanbascom/googlejavaformat@v4
         with:
           args: "--skip-sorting-imports --replace"
           # Recommended if you use MacOS:
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # v2 minimum required
-      - uses: axel-op/googlejavaformat-action@v3
+      - uses: ryanbascom/googlejavaformat@v4
         with:
           args: "--set-exit-if-changed"
 ```
@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # v2 minimum required
-      - uses: axel-op/googlejavaformat-action@v3
+      - uses: ryanbascom/googlejavaformat@v4
         with:
           args: "--replace"
           skip-commit: true
