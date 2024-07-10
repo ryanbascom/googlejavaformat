@@ -14313,7 +14313,7 @@ async function run() {
         core.debug(`Arguments: ${args}`);
         const exclude = core.getInput('files-excluded');
         const excludeRex = exclude && new RegExp(exclude);
-        const files = await (await glob.create(core.getInput('files'))).glob();
+        const files = core.getInput('files').split(' ');
         core.debug(`Files:`);
         for (const file of files) {
             if (!excludeRex || !excludeRex.test(file)) {
